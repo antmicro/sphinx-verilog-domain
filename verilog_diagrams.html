@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     
-    <title>Index &#8212; sphinx-verilog-domain 0.1 documentation</title>
+    <title>Verilog Diagrams compatibility test &#8212; sphinx-verilog-domain 0.1 documentation</title>
 
     <link rel="stylesheet" href="_static/material-icons.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -23,15 +23,16 @@
     <script src="_static/language_data.js"></script>
     <script src="http://livejs.com/live.js"></script>
     <script src="_static/sphinx_symbiflow_theme.js"></script>
-    <link rel="index" title="Index" href="#" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Symbolator compatibility test" href="symbolator.html" /> 
   </head>
 <body>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-drawer"><header class="mdl-layout__header mdl-layout__header--waterfall ">
     <div class="mdl-layout__header-row">
         
         <nav class="mdl-navigation breadcrumb">
-            <a class="mdl-navigation__link is-active">Index</a>
+            <a class="mdl-navigation__link is-active">Verilog Diagrams compatibility test</a>
         </nav>
         <div class="mdl-layout-spacer"></div>
         <nav class="mdl-navigation">
@@ -52,6 +53,14 @@
       </div>
 </form>
         
+<a id="button-show-source"
+    class="mdl-button mdl-js-button mdl-button--icon"
+    href="_sources/verilog_diagrams.rst.txt" rel="nofollow">
+<i class="material-icons">code</i>
+</a>
+<div class="mdl-tooltip" data-mdl-for="button-show-source">
+Show Source
+</div>
         </nav>
     </div>
     <div class="mdl-layout__header-row header-links">
@@ -88,14 +97,14 @@
   
       
       <nav class="mdl-navigation">
-          <ul>
+          <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="port.html">verilog:port</a></li>
 <li class="toctree-l1"><a class="reference internal" href="parameter.html">verilog:parameter</a></li>
 <li class="toctree-l1"><a class="reference internal" href="module.html">verilog:module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="nesting.html">Nesting and refs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="nesting2.html">Cross-document refs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="symbolator.html">Symbolator compatibility test</a></li>
-<li class="toctree-l1"><a class="reference internal" href="verilog_diagrams.html">Verilog Diagrams compatibility test</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Verilog Diagrams compatibility test</a></li>
 </ul>
 
       </nav>
@@ -121,14 +130,14 @@
   
       
       <nav class="mdl-navigation">
-          <ul>
+          <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="port.html">verilog:port</a></li>
 <li class="toctree-l1"><a class="reference internal" href="parameter.html">verilog:parameter</a></li>
 <li class="toctree-l1"><a class="reference internal" href="module.html">verilog:module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="nesting.html">Nesting and refs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="nesting2.html">Cross-document refs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="symbolator.html">Symbolator compatibility test</a></li>
-<li class="toctree-l1"><a class="reference internal" href="verilog_diagrams.html">Verilog Diagrams compatibility test</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Verilog Diagrams compatibility test</a></li>
 </ul>
 
       </nav>
@@ -140,11 +149,32 @@
     <div class="document">
         <div class="page-content">
         
+  <div class="section" id="verilog-diagrams-compatibility-test">
+<h1>Verilog Diagrams compatibility test<a class="headerlink" href="#verilog-diagrams-compatibility-test" title="Permalink to this headline">¶</a></h1>
+<dl class="verilog module">
+<dt id="verilog-carry4">
+module <code class="sig-name descname">CARRY4</code><span class="p">(</span><code class="sig-prename descclassname">CO</code><span class="p">,</span> <code class="sig-prename descclassname">O</code><span class="p">,</span> <code class="sig-prename descclassname">CI</code><span class="p">,</span> <code class="sig-prename descclassname">CYINIT</code><span class="p">,</span> <code class="sig-prename descclassname">DI</code><span class="p">,</span> <code class="sig-prename descclassname">S</code><span class="p">)</span><span class="p">;</span><a class="headerlink" href="#verilog-carry4" title="Permalink to this definition">¶</a></dt>
+<dd><p>Source code without license:</p>
+<div class="highlight-verilog notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>19
+20
+21
+22
+23
+24
+25</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">module</span> <span class="n">CARRY4</span><span class="p">(</span><span class="k">output</span> <span class="p">[</span><span class="mh">3</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">CO</span><span class="p">,</span> <span class="n">O</span><span class="p">,</span> <span class="k">input</span> <span class="n">CI</span><span class="p">,</span> <span class="n">CYINIT</span><span class="p">,</span> <span class="k">input</span> <span class="p">[</span><span class="mh">3</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span> <span class="n">DI</span><span class="p">,</span> <span class="n">S</span><span class="p">);</span>
+  <span class="k">assign</span> <span class="n">O</span> <span class="o">=</span> <span class="n">S</span> <span class="o">^</span> <span class="p">{</span><span class="n">CO</span><span class="p">[</span><span class="mh">2</span><span class="o">:</span><span class="mh">0</span><span class="p">],</span> <span class="n">CI</span> <span class="o">|</span> <span class="n">CYINIT</span><span class="p">};</span>
+  <span class="k">assign</span> <span class="n">CO</span><span class="p">[</span><span class="mh">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">S</span><span class="p">[</span><span class="mh">0</span><span class="p">]</span> <span class="o">?</span> <span class="n">CI</span> <span class="o">|</span> <span class="n">CYINIT</span> <span class="o">:</span> <span class="n">DI</span><span class="p">[</span><span class="mh">0</span><span class="p">];</span>
+  <span class="k">assign</span> <span class="n">CO</span><span class="p">[</span><span class="mh">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">S</span><span class="p">[</span><span class="mh">1</span><span class="p">]</span> <span class="o">?</span> <span class="n">CO</span><span class="p">[</span><span class="mh">0</span><span class="p">]</span> <span class="o">:</span> <span class="n">DI</span><span class="p">[</span><span class="mh">1</span><span class="p">];</span>
+  <span class="k">assign</span> <span class="n">CO</span><span class="p">[</span><span class="mh">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">S</span><span class="p">[</span><span class="mh">2</span><span class="p">]</span> <span class="o">?</span> <span class="n">CO</span><span class="p">[</span><span class="mh">1</span><span class="p">]</span> <span class="o">:</span> <span class="n">DI</span><span class="p">[</span><span class="mh">2</span><span class="p">];</span>
+  <span class="k">assign</span> <span class="n">CO</span><span class="p">[</span><span class="mh">3</span><span class="p">]</span> <span class="o">=</span> <span class="n">S</span><span class="p">[</span><span class="mh">3</span><span class="p">]</span> <span class="o">?</span> <span class="n">CO</span><span class="p">[</span><span class="mh">2</span><span class="p">]</span> <span class="o">:</span> <span class="n">DI</span><span class="p">[</span><span class="mh">3</span><span class="p">];</span>
+<span class="k">endmodule</span>
+</pre></div>
+</td></tr></table></div>
+<p>Diagram:</p>
+<object data="_images/verilog_diagrams-19-source-verilog-carry4-whole.svg" type="image/svg+xml">
+            <p class="warning">/sources/example/source/verilog/carry4-whole.v</p></object>
+</dd></dl>
 
-<h1 id="index">Index</h1>
-
-<div class="genindex-jumpbox">
- 
 </div>
 
 
@@ -156,6 +186,13 @@
 
       <div class="clearer"></div>
     </div><div class="pagenation">
+     <a id="button-prev" href="symbolator.html" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored" role="botton" accesskey="P">
+         <i class="pagenation-arrow-L material-icons">arrow_back</i>
+         <div class="pagenation-text">
+            <span class="pagenation-direction">Previous</span>
+            <div>Symbolator compatibility test</div>
+         </div>
+     </a>
 </div>
         <footer class="mdl-mini-footer">
     <div class="mdl-mini-footer__left-section">

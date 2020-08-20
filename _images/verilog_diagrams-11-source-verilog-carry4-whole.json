@@ -1,0 +1,226 @@
+{
+  "creator": "Yosys 0.9+932 (git sha1 6bccd35a, x86_64-conda_cos6-linux-gnu-gcc 1.23.0.449-a04d0 -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -fdebug-prefix-map=/tmp/really-really-really-really-really-really-really-really-really-really-really-really-really-long-path/conda/conda-bld/yosys_1587391045005/work=/usr/local/src/conda/yosys-0.8_3925_g6bccd35a -fdebug-prefix-map=/env=/usr/local/src/conda-prefix -fPIC -Os)",
+  "modules": {
+    "CARRY4": {
+      "attributes": {
+        "top": 1,
+        "src": "/sources/example/source/verilog/carry4-whole.v:19"
+      },
+      "ports": {
+        "CO": {
+          "direction": "output",
+          "bits": [ 2, 3, 4, 5 ]
+        },
+        "O": {
+          "direction": "output",
+          "bits": [ 6, 7, 8, 9 ]
+        },
+        "CI": {
+          "direction": "input",
+          "bits": [ 10 ]
+        },
+        "CYINIT": {
+          "direction": "input",
+          "bits": [ 11 ]
+        },
+        "DI": {
+          "direction": "input",
+          "bits": [ 12, 13, 14, 15 ]
+        },
+        "S": {
+          "direction": "input",
+          "bits": [ 16, 17, 18, 19 ]
+        }
+      },
+      "cells": {
+        "$or$/sources/example/source/verilog/carry4-whole.v:20$1": {
+          "hide_name": 1,
+          "type": "$or",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "/sources/example/source/verilog/carry4-whole.v:20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 10 ],
+            "B": [ 11 ],
+            "Y": [ 20 ]
+          }
+        },
+        "$ternary$/sources/example/source/verilog/carry4-whole.v:21$4": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": 1
+          },
+          "attributes": {
+            "src": "/sources/example/source/verilog/carry4-whole.v:21"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 12 ],
+            "B": [ 20 ],
+            "S": [ 16 ],
+            "Y": [ 2 ]
+          }
+        },
+        "$ternary$/sources/example/source/verilog/carry4-whole.v:22$5": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": 1
+          },
+          "attributes": {
+            "src": "/sources/example/source/verilog/carry4-whole.v:22"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 13 ],
+            "B": [ 2 ],
+            "S": [ 17 ],
+            "Y": [ 3 ]
+          }
+        },
+        "$ternary$/sources/example/source/verilog/carry4-whole.v:23$6": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": 1
+          },
+          "attributes": {
+            "src": "/sources/example/source/verilog/carry4-whole.v:23"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 14 ],
+            "B": [ 3 ],
+            "S": [ 18 ],
+            "Y": [ 4 ]
+          }
+        },
+        "$ternary$/sources/example/source/verilog/carry4-whole.v:24$7": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": 1
+          },
+          "attributes": {
+            "src": "/sources/example/source/verilog/carry4-whole.v:24"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 15 ],
+            "B": [ 4 ],
+            "S": [ 19 ],
+            "Y": [ 5 ]
+          }
+        },
+        "$xor$/sources/example/source/verilog/carry4-whole.v:20$2": {
+          "hide_name": 1,
+          "type": "$xor",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 4,
+            "B_SIGNED": 0,
+            "B_WIDTH": 4,
+            "Y_WIDTH": 4
+          },
+          "attributes": {
+            "src": "/sources/example/source/verilog/carry4-whole.v:20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 16, 17, 18, 19 ],
+            "B": [ 20, 2, 3, 4 ],
+            "Y": [ 6, 7, 8, 9 ]
+          }
+        }
+      },
+      "netnames": {
+        "$or$/sources/example/source/verilog/carry4-whole.v:20$1_Y": {
+          "hide_name": 1,
+          "bits": [ 20 ],
+          "attributes": {
+            "src": "/sources/example/source/verilog/carry4-whole.v:20"
+          }
+        },
+        "CI": {
+          "hide_name": 0,
+          "bits": [ 10 ],
+          "attributes": {
+            "src": "/sources/example/source/verilog/carry4-whole.v:19"
+          }
+        },
+        "CO": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5 ],
+          "attributes": {
+            "src": "/sources/example/source/verilog/carry4-whole.v:19"
+          }
+        },
+        "CYINIT": {
+          "hide_name": 0,
+          "bits": [ 11 ],
+          "attributes": {
+            "src": "/sources/example/source/verilog/carry4-whole.v:19"
+          }
+        },
+        "DI": {
+          "hide_name": 0,
+          "bits": [ 12, 13, 14, 15 ],
+          "attributes": {
+            "src": "/sources/example/source/verilog/carry4-whole.v:19"
+          }
+        },
+        "O": {
+          "hide_name": 0,
+          "bits": [ 6, 7, 8, 9 ],
+          "attributes": {
+            "src": "/sources/example/source/verilog/carry4-whole.v:19"
+          }
+        },
+        "S": {
+          "hide_name": 0,
+          "bits": [ 16, 17, 18, 19 ],
+          "attributes": {
+            "src": "/sources/example/source/verilog/carry4-whole.v:19"
+          }
+        }
+      }
+    }
+  }
+}
