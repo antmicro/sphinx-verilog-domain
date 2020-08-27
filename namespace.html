@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     
-    <title>Cross-document refs &#8212; sphinx-verilog-domain 0.1 documentation</title>
+    <title>verilog:namespace{,-push,-pop} &#8212; sphinx-verilog-domain 0.1 documentation</title>
 
     <link rel="stylesheet" href="_static/material-icons.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -25,15 +25,15 @@
     <script src="_static/sphinx_symbiflow_theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="verilog:namespace{,-push,-pop}" href="namespace.html" />
-    <link rel="prev" title="Nesting and refs" href="nesting.html" /> 
+    <link rel="next" title="Symbolator compatibility test" href="symbolator.html" />
+    <link rel="prev" title="Cross-document refs" href="nesting2.html" /> 
   </head>
 <body>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-drawer"><header class="mdl-layout__header mdl-layout__header--waterfall ">
     <div class="mdl-layout__header-row">
         
         <nav class="mdl-navigation breadcrumb">
-            <a class="mdl-navigation__link is-active">Cross-document refs</a>
+            <a class="mdl-navigation__link is-active">verilog:namespace{,-push,-pop}</a>
         </nav>
         <div class="mdl-layout-spacer"></div>
         <nav class="mdl-navigation">
@@ -56,7 +56,7 @@
         
 <a id="button-show-source"
     class="mdl-button mdl-js-button mdl-button--icon"
-    href="_sources/nesting2.rst.txt" rel="nofollow">
+    href="_sources/namespace.rst.txt" rel="nofollow">
 <i class="material-icons">code</i>
 </a>
 <div class="mdl-tooltip" data-mdl-for="button-show-source">
@@ -103,8 +103,8 @@ Show Source
 <li class="toctree-l1"><a class="reference internal" href="parameter.html">verilog:parameter</a></li>
 <li class="toctree-l1"><a class="reference internal" href="module.html">verilog:module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="nesting.html">Nesting and refs</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Cross-document refs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="namespace.html">verilog:namespace{,-push,-pop}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nesting2.html">Cross-document refs</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">verilog:namespace{,-push,-pop}</a></li>
 <li class="toctree-l1"><a class="reference internal" href="symbolator.html">Symbolator compatibility test</a></li>
 <li class="toctree-l1"><a class="reference internal" href="verilog_diagrams.html">Verilog Diagrams compatibility test</a></li>
 </ul>
@@ -137,8 +137,8 @@ Show Source
 <li class="toctree-l1"><a class="reference internal" href="parameter.html">verilog:parameter</a></li>
 <li class="toctree-l1"><a class="reference internal" href="module.html">verilog:module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="nesting.html">Nesting and refs</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Cross-document refs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="namespace.html">verilog:namespace{,-push,-pop}</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nesting2.html">Cross-document refs</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">verilog:namespace{,-push,-pop}</a></li>
 <li class="toctree-l1"><a class="reference internal" href="symbolator.html">Symbolator compatibility test</a></li>
 <li class="toctree-l1"><a class="reference internal" href="verilog_diagrams.html">Verilog Diagrams compatibility test</a></li>
 </ul>
@@ -152,17 +152,92 @@ Show Source
     <div class="document">
         <div class="page-content">
         
-  <div class="section" id="cross-document-refs">
-<h1>Cross-document refs<a class="headerlink" href="#cross-document-refs" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="verilog-namespace-push-pop">
+<h1>verilog:namespace{,-push,-pop}<a class="headerlink" href="#verilog-namespace-push-pop" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="#verilog-in-global-ns" title="port in_global_ns"><code class="xref verilog verilog-ref docutils literal notranslate"><span class="pre">$root::in_global_ns</span></code></a></p></li>
+<li><p><a class="reference internal" href="#verilog-a-b-inside-a-b" title="port A::B::inside_a_b"><code class="xref verilog verilog-ref docutils literal notranslate"><span class="pre">$root::A::B::inside_a_b</span></code></a></p></li>
+<li><p><a class="reference internal" href="#verilog-a-b-c-d-inside-a-b-c-d" title="port A::B::C::D::inside_a_b_c_d"><code class="xref verilog verilog-ref docutils literal notranslate"><span class="pre">$root::A::B::C::D::inside_a_b_c_d</span></code></a></p></li>
+<li><p><a class="reference internal" href="#verilog-a-b-inside-a-b-again" title="port A::B::inside_a_b_again"><code class="xref verilog verilog-ref docutils literal notranslate"><span class="pre">$root::A::B::inside_a_b_again</span></code></a></p></li>
+<li><p><a class="reference internal" href="#verilog-a-b-refname-inside-a-b" title="port A::B::inside_a_b_with_refname"><code class="xref verilog verilog-ref docutils literal notranslate"><span class="pre">$root::A::B::refname_inside_a_b</span></code></a></p></li>
+<li><p><a class="reference internal" href="#verilog-a-b-x-y-inside-a-b-x-y" title="port A::B::X::Y::inside_a_b_x_y"><code class="xref verilog verilog-ref docutils literal notranslate"><span class="pre">$root::A::B::X::Y::inside_a_b_x_y</span></code></a></p></li>
+<li><p><a class="reference internal" href="#verilog-a-namespaces-test-module-in-a" title="module A::namespaces_test_module_in_a"><code class="xref verilog verilog-ref docutils literal notranslate"><span class="pre">$root::A::namespaces_test_module_in_a</span></code></a></p></li>
+<li><p><a class="reference internal" href="#verilog-b-c-d-module-inside-b-c-d" title="module B::C::D::module_inside_b_c_d"><code class="xref verilog verilog-ref docutils literal notranslate"><span class="pre">$root::B::C::D::module_inside_b_c_d</span></code></a></p></li>
+<li><p><a class="reference internal" href="#verilog-a-input-in-a" title="port A::input_in_a"><code class="xref verilog verilog-ref docutils literal notranslate"><span class="pre">$root::A::input_in_a</span></code></a></p></li>
+<li><p><a class="reference internal" href="#verilog-global-ns-again" title="port global_ns_again"><code class="xref verilog verilog-ref docutils literal notranslate"><span class="pre">$root::global_ns_again</span></code></a></p></li>
+</ul>
+<dl class="verilog port">
+<dt id="verilog-in-global-ns">
+input <code class="sig-name descname">in_global_ns</code><span class="p">;</span><a class="headerlink" href="#verilog-in-global-ns" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">verilog</span><span class="p">:</span><span class="n">namespace</span><span class="p">::</span> <span class="n">A</span><span class="p">::</span><span class="n">B</span>
+</pre></div>
+</div>
+<dl class="verilog port">
+<dt id="verilog-a-b-inside-a-b">
+input <code class="sig-name descname">inside_a_b</code><span class="p">;</span><a class="headerlink" href="#verilog-a-b-inside-a-b" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">verilog</span><span class="p">:</span><span class="n">namespace</span><span class="o">-</span><span class="n">push</span><span class="p">::</span> <span class="n">C</span><span class="p">::</span><span class="n">D</span>
+</pre></div>
+</div>
+<dl class="verilog port">
+<dt id="verilog-a-b-c-d-inside-a-b-c-d">
+input <code class="sig-name descname">inside_a_b_c_d</code><span class="p">;</span><a class="headerlink" href="#verilog-a-b-c-d-inside-a-b-c-d" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">verilog</span><span class="p">:</span><span class="n">namespace</span><span class="o">-</span><span class="n">pop</span><span class="p">::</span>
+</pre></div>
+</div>
+<dl class="verilog port">
+<dt id="verilog-a-b-inside-a-b-again">
+input <code class="sig-name descname">inside_a_b_again</code><span class="p">;</span><a class="headerlink" href="#verilog-a-b-inside-a-b-again" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="verilog port">
+<dt id="verilog-a-b-refname-inside-a-b">
+input <code class="sig-name descname">inside_a_b_with_refname</code><span class="p">;</span><a class="headerlink" href="#verilog-a-b-refname-inside-a-b" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">verilog</span><span class="p">:</span><span class="n">namespace</span><span class="o">-</span><span class="n">push</span><span class="p">::</span> <span class="n">X</span><span class="p">::</span><span class="n">Y</span>
+</pre></div>
+</div>
+<dl class="verilog port">
+<dt id="verilog-a-b-x-y-inside-a-b-x-y">
+input <code class="sig-name descname">inside_a_b_x_y</code><span class="p">;</span><a class="headerlink" href="#verilog-a-b-x-y-inside-a-b-x-y" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">verilog</span><span class="p">:</span><span class="n">namespace</span><span class="p">::</span> <span class="n">A</span>
+</pre></div>
+</div>
 <dl class="verilog module">
-<dt id="verilog-inotherfile">
-module <code class="sig-name descname">InOtherFile</code><span class="p">(</span><a class="reference internal" href="#verilog-inotherfile-p" title="port p"><code class="sig-prename descclassname">p</code></a><span class="p">)</span><span class="p">;</span><a class="headerlink" href="#verilog-inotherfile" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="verilog port">
-<dt id="verilog-inotherfile-p">
-input <code class="sig-name descname">p</code><span class="p">;</span><a class="headerlink" href="#verilog-inotherfile-p" title="Permalink to this definition">¶</a></dt>
+<dt id="verilog-a-namespaces-test-module-in-a">
+module <code class="sig-name descname">namespaces_test_module_in_a</code><span class="p">(</span><code class="sig-prename descclassname">a</code><span class="p">)</span><span class="p">;</span><a class="headerlink" href="#verilog-a-namespaces-test-module-in-a" title="Permalink to this definition">¶</a></dt>
+<dd><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">verilog</span><span class="p">:</span><span class="n">namespace</span><span class="p">::</span> <span class="n">B</span><span class="p">::</span><span class="n">C</span>
+<span class="o">..</span> <span class="n">verilog</span><span class="p">:</span><span class="n">namespace</span><span class="o">-</span><span class="n">push</span><span class="p">::</span> <span class="n">D</span>
+</pre></div>
+</div>
+<dl class="verilog module">
+<dt id="verilog-b-c-d-module-inside-b-c-d">
+module <code class="sig-name descname">module_inside_b_c_d</code><span class="p">(</span><code class="sig-prename descclassname">a</code><span class="p">)</span><span class="p">;</span><a class="headerlink" href="#verilog-b-c-d-module-inside-b-c-d" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
+
+<p>Namespace changes applied inside a directive’s content (e.g. in module description above) should not be propagated to a parent rst scope.</p>
+<dl class="verilog port">
+<dt id="verilog-a-input-in-a">
+input <code class="sig-name descname">input_in_a</code><span class="p">;</span><a class="headerlink" href="#verilog-a-input-in-a" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">verilog</span><span class="p">:</span><span class="n">namespace</span><span class="p">::</span>
+</pre></div>
+</div>
+<dl class="verilog port">
+<dt id="verilog-global-ns-again">
+input <code class="sig-name descname">global_ns_again</code><span class="p">;</span><a class="headerlink" href="#verilog-global-ns-again" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <hr class="docutils" />
 <p>Some text to enable scrolling…</p>
@@ -269,18 +344,18 @@ input <code class="sig-name descname">p</code><span class="p">;</span><a class="
 
       <div class="clearer"></div>
     </div><div class="pagenation">
-     <a id="button-prev" href="nesting.html" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored" role="botton" accesskey="P">
+     <a id="button-prev" href="nesting2.html" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored" role="botton" accesskey="P">
          <i class="pagenation-arrow-L material-icons">arrow_back</i>
          <div class="pagenation-text">
             <span class="pagenation-direction">Previous</span>
-            <div>Nesting and refs</div>
+            <div>Cross-document refs</div>
          </div>
      </a>
-     <a id="button-next" href="namespace.html" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored" role="botton" accesskey="N">
+     <a id="button-next" href="symbolator.html" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored" role="botton" accesskey="N">
         <i class="pagenation-arrow-R material-icons">arrow_forward</i>
         <div class="pagenation-text">
             <span class="pagenation-direction">Next</span>
-            <div>verilog:namespace{,-push,-pop}</div>
+            <div>Symbolator compatibility test</div>
         </div>
      </a>
 </div>
