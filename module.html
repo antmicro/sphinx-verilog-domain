@@ -194,12 +194,95 @@ module <code class="sig-name descname">same_input</code><span class="p">(</span>
 module <code class="sig-name descname">mixed_direction</code><span class="p">(</span><span>.</span><code class="sig-prename descclassname">p</code><span class="p">(</span><span class="p">{</span><code class="sig-prename descclassname">a</code><span class="p">,</span> <code class="sig-prename descclassname">e</code><span class="p">}</span><span class="p">)</span><span class="p">)</span><span class="p">;</span><a class="headerlink" href="#verilog-mixed-direction" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
+<div class="section" id="module-parameters">
+<h2>Module parameters<a class="headerlink" href="#module-parameters" title="Permalink to this headline">¶</a></h2>
+<dl class="verilog module">
+<dt id="verilog-non-ansi-params-test-1">
+<span class="p">(*</span> <span>x=1</span> <span class="p">*)</span> module <code class="sig-name descname">non_ansi_params_test_1</code><span class="p">#</span><span class="p">(</span><span class="p">)</span><span class="p">(</span><code class="sig-prename descclassname">port_name</code><span class="p">)</span><span class="p">;</span><a class="headerlink" href="#verilog-non-ansi-params-test-1" title="Permalink to this definition">¶</a></dt>
+<dd><p>References:
+<a class="reference internal" href="#verilog-non-ansi-params-test-1" title="module non_ansi_params_test_1"><code class="xref verilog verilog-ref docutils literal notranslate"><span class="pre">non_ansi_params_test_1</span></code></a></p>
+</dd></dl>
+
+<dl class="verilog module">
+<dt id="verilog-non-ansi-params-test-2">
+<span class="p">(*</span> <span>x=1</span> <span class="p">*)</span> module <code class="sig-name descname">non_ansi_params_test_2</code><span class="p">#</span><span class="p">(</span><code class="sig-prename descclassname">num</code> <span>=</span> <span>3</span><span class="p">,</span> <code class="sig-prename descclassname">other_num</code> <span>=</span> <span>2 * 2</span><span class="p">)</span><span class="p">(</span><code class="sig-prename descclassname">port_name</code><span class="p">)</span><span class="p">;</span><a class="headerlink" href="#verilog-non-ansi-params-test-2" title="Permalink to this definition">¶</a></dt>
+<dd><p>References:
+<a class="reference internal" href="#verilog-non-ansi-params-test-2" title="module non_ansi_params_test_2"><code class="xref verilog verilog-ref docutils literal notranslate"><span class="pre">non_ansi_params_test_2</span></code></a>,
+<a class="reference internal" href="#verilog-non-ansi-params-test-2" title="non_ansi_params_test_2::num"><code class="xref verilog verilog-ref docutils literal notranslate"><span class="pre">num</span></code></a>,
+<a class="reference internal" href="#verilog-non-ansi-params-test-2" title="non_ansi_params_test_2::other_num"><code class="xref verilog verilog-ref docutils literal notranslate"><span class="pre">other_num</span></code></a></p>
+</dd></dl>
+
+<dl class="verilog module">
+<dt id="verilog-non-ansi-params-test-3">
+<span class="p">(*</span> <span>x=1</span> <span class="p">*)</span> module <code class="sig-name descname">non_ansi_params_test_3</code><span class="p">#</span><span class="p">(</span><code class="sig-prename descclassname">num</code><span class="p">,</span> <a class="reference internal" href="#verilog-non-ansi-params-test-3-other-num" title="parameter other_num"><code class="sig-prename descclassname">other_num</code></a><span class="p">)</span><span class="p">(</span><code class="sig-prename descclassname">port_name</code><span class="p">)</span><span class="p">;</span><a class="headerlink" href="#verilog-non-ansi-params-test-3" title="Permalink to this definition">¶</a></dt>
+<dd><p>References:
+<a class="reference internal" href="#verilog-non-ansi-params-test-3" title="module non_ansi_params_test_3"><code class="xref verilog verilog-ref docutils literal notranslate"><span class="pre">non_ansi_params_test_3</span></code></a>,
+<a class="reference internal" href="#verilog-non-ansi-params-test-3" title="non_ansi_params_test_3::num"><code class="xref verilog verilog-ref docutils literal notranslate"><span class="pre">num</span></code></a>,
+<a class="reference internal" href="#verilog-non-ansi-params-test-3-other-num" title="parameter non_ansi_params_test_3::other_num"><code class="xref verilog verilog-ref docutils literal notranslate"><span class="pre">other_num</span></code></a></p>
+<p>Parameter <a class="reference internal" href="#verilog-non-ansi-params-test-3-other-num" title="parameter non_ansi_params_test_3::other_num"><code class="xref verilog verilog-ref docutils literal notranslate"><span class="pre">other_num</span></code></a> is explicitly described below. The declaration in module header should link to it.</p>
+<dl class="verilog parameter">
+<dt id="verilog-non-ansi-params-test-3-other-num">
+parameter <code class="sig-name descname">other_num</code> <span>=</span> <span>2 * 2</span><span class="p">;</span><a class="headerlink" href="#verilog-non-ansi-params-test-3-other-num" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parameter description.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="verilog module">
+<dt id="verilog-non-ansi-params-test-4">
+<span class="p">(*</span> <span>x=1</span> <span class="p">*)</span> module <code class="sig-name descname">non_ansi_params_test_4</code><span class="p">#</span><span class="p">(</span>parameter <code class="sig-prename descclassname">num</code> <span>=</span> <span>3</span><span class="p">,</span> <code class="sig-prename descclassname">other_num</code> <span>=</span> <span>2 * 2</span><span class="p">)</span><span class="p">(</span><code class="sig-prename descclassname">port_name</code><span class="p">)</span><span class="p">;</span><a class="headerlink" href="#verilog-non-ansi-params-test-4" title="Permalink to this definition">¶</a></dt>
+<dd><p>References:
+<a class="reference internal" href="#verilog-non-ansi-params-test-4" title="module non_ansi_params_test_4"><code class="xref verilog verilog-ref docutils literal notranslate"><span class="pre">non_ansi_params_test_4</span></code></a>,
+<a class="reference internal" href="#verilog-non-ansi-params-test-4" title="non_ansi_params_test_4::num"><code class="xref verilog verilog-ref docutils literal notranslate"><span class="pre">num</span></code></a>,
+<a class="reference internal" href="#verilog-non-ansi-params-test-4" title="non_ansi_params_test_4::other_num"><code class="xref verilog verilog-ref docutils literal notranslate"><span class="pre">other_num</span></code></a></p>
+</dd></dl>
+
+<dl class="verilog module">
+<dt id="verilog-non-ansi-params-test-5">
+<span class="p">(*</span> <span>x=1</span> <span class="p">*)</span> module <code class="sig-name descname">non_ansi_params_test_5</code><span class="p">#</span><span class="p">(</span>parameter <a class="reference internal" href="#verilog-non-ansi-params-test-5-num" title="parameter num"><code class="sig-prename descclassname">num</code></a> <span>=</span> <span>3</span><span class="p">,</span> localparam <code class="sig-prename descclassname">other_num</code> <span>=</span> <span>2 * 2</span><span class="p">,</span> <code class="sig-prename descclassname">yet_another_one</code> <span>=</span> <span>42</span><span class="p">)</span><span class="p">(</span><code class="sig-prename descclassname">port_name</code><span class="p">)</span><span class="p">;</span><a class="headerlink" href="#verilog-non-ansi-params-test-5" title="Permalink to this definition">¶</a></dt>
+<dd><p>References:
+<a class="reference internal" href="#verilog-non-ansi-params-test-5" title="module non_ansi_params_test_5"><code class="xref verilog verilog-ref docutils literal notranslate"><span class="pre">non_ansi_params_test_5</span></code></a>,
+<a class="reference internal" href="#verilog-non-ansi-params-test-5-num" title="parameter non_ansi_params_test_5::num"><code class="xref verilog verilog-ref docutils literal notranslate"><span class="pre">num</span></code></a>,
+<a class="reference internal" href="#verilog-non-ansi-params-test-5" title="non_ansi_params_test_5::other_num"><code class="xref verilog verilog-ref docutils literal notranslate"><span class="pre">other_num</span></code></a>
+<a class="reference internal" href="#verilog-non-ansi-params-test-5" title="non_ansi_params_test_5::yet_another_one"><code class="xref verilog verilog-ref docutils literal notranslate"><span class="pre">yet_another_one</span></code></a></p>
+<p>Parameter <a class="reference internal" href="#verilog-non-ansi-params-test-5-num" title="parameter non_ansi_params_test_5::num"><code class="xref verilog verilog-ref docutils literal notranslate"><span class="pre">num</span></code></a> is explicitly described below. The declaration in module header should link to it.</p>
+<dl class="verilog parameter">
+<dt id="verilog-non-ansi-params-test-5-num">
+parameter <code class="sig-name descname">num</code><span class="p">;</span><a class="headerlink" href="#verilog-non-ansi-params-test-5-num" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parameter description.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="verilog module">
+<dt id="verilog-non-ansi-params-test-6">
+<span class="p">(*</span> <span>x=1</span> <span class="p">*)</span> module <code class="sig-name descname">non_ansi_params_test_6</code><span class="p">#</span><span class="p">(</span>parameter <code class="sig-prename descclassname">num</code> <span>=</span> <span>3</span><span class="p">,</span> localparam <code class="sig-prename descclassname">other_num</code><span class="p">,</span> <code class="sig-prename descclassname">yet_another_one</code> <span>=</span> <span>42</span><span class="p">)</span><span class="p">(</span><code class="sig-prename descclassname">port_name</code><span class="p">)</span><span class="p">;</span><a class="headerlink" href="#verilog-non-ansi-params-test-6" title="Permalink to this definition">¶</a></dt>
+<dd><p>References:
+<a class="reference internal" href="#verilog-non-ansi-params-test-6" title="module non_ansi_params_test_6"><code class="xref verilog verilog-ref docutils literal notranslate"><span class="pre">non_ansi_params_test_6</span></code></a>,
+<a class="reference internal" href="#verilog-non-ansi-params-test-6" title="non_ansi_params_test_6::num"><code class="xref verilog verilog-ref docutils literal notranslate"><span class="pre">num</span></code></a>,
+<a class="reference internal" href="#verilog-non-ansi-params-test-6" title="non_ansi_params_test_6::other_num"><code class="xref verilog verilog-ref docutils literal notranslate"><span class="pre">other_num</span></code></a>
+<a class="reference internal" href="#verilog-non-ansi-params-test-6" title="non_ansi_params_test_6::yet_another_one"><code class="xref verilog verilog-ref docutils literal notranslate"><span class="pre">yet_another_one</span></code></a></p>
+</dd></dl>
+
+</div>
 </div>
 
 
         </div>
         <div class="side-doc-outline">
             <div class="side-doc-outline--content"> 
+<div class="localtoc">
+    <p class="caption">
+      <span class="caption-text">Table Of Contents</span>
+    </p>
+    <ul>
+<li><a class="reference internal" href="#">verilog:module</a><ul>
+<li><a class="reference internal" href="#module-parameters">Module parameters</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
             </div>
         </div>
 

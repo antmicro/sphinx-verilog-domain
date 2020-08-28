@@ -4,7 +4,7 @@
     "CARRY4": {
       "attributes": {
         "top": 1,
-        "src": "/home/mglb/projects/sphinx-verilog/src/sphinx-verilogdomain-gh/example/source/verilog/carry4-whole.v:19"
+        "src": "carry4-whole.v:19"
       },
       "ports": {
         "CO": {
@@ -33,7 +33,7 @@
         }
       },
       "cells": {
-        "$or$/home/mglb/projects/sphinx-verilog/src/sphinx-verilogdomain-gh/example/source/verilog/carry4-whole.v:20$1": {
+        "$or$carry4-whole.v:20$1": {
           "hide_name": 1,
           "type": "$or",
           "parameters": {
@@ -44,7 +44,7 @@
             "Y_WIDTH": 1
           },
           "attributes": {
-            "src": "/home/mglb/projects/sphinx-verilog/src/sphinx-verilogdomain-gh/example/source/verilog/carry4-whole.v:20"
+            "src": "carry4-whole.v:20"
           },
           "port_directions": {
             "A": "input",
@@ -57,14 +57,14 @@
             "Y": [ 20 ]
           }
         },
-        "$ternary$/home/mglb/projects/sphinx-verilog/src/sphinx-verilogdomain-gh/example/source/verilog/carry4-whole.v:21$4": {
+        "$ternary$carry4-whole.v:21$4": {
           "hide_name": 1,
           "type": "$mux",
           "parameters": {
             "WIDTH": 1
           },
           "attributes": {
-            "src": "/home/mglb/projects/sphinx-verilog/src/sphinx-verilogdomain-gh/example/source/verilog/carry4-whole.v:21"
+            "src": "carry4-whole.v:21"
           },
           "port_directions": {
             "A": "input",
@@ -79,14 +79,14 @@
             "Y": [ 2 ]
           }
         },
-        "$ternary$/home/mglb/projects/sphinx-verilog/src/sphinx-verilogdomain-gh/example/source/verilog/carry4-whole.v:22$5": {
+        "$ternary$carry4-whole.v:22$5": {
           "hide_name": 1,
           "type": "$mux",
           "parameters": {
             "WIDTH": 1
           },
           "attributes": {
-            "src": "/home/mglb/projects/sphinx-verilog/src/sphinx-verilogdomain-gh/example/source/verilog/carry4-whole.v:22"
+            "src": "carry4-whole.v:22"
           },
           "port_directions": {
             "A": "input",
@@ -101,14 +101,14 @@
             "Y": [ 3 ]
           }
         },
-        "$ternary$/home/mglb/projects/sphinx-verilog/src/sphinx-verilogdomain-gh/example/source/verilog/carry4-whole.v:23$6": {
+        "$ternary$carry4-whole.v:23$6": {
           "hide_name": 1,
           "type": "$mux",
           "parameters": {
             "WIDTH": 1
           },
           "attributes": {
-            "src": "/home/mglb/projects/sphinx-verilog/src/sphinx-verilogdomain-gh/example/source/verilog/carry4-whole.v:23"
+            "src": "carry4-whole.v:23"
           },
           "port_directions": {
             "A": "input",
@@ -123,14 +123,14 @@
             "Y": [ 4 ]
           }
         },
-        "$ternary$/home/mglb/projects/sphinx-verilog/src/sphinx-verilogdomain-gh/example/source/verilog/carry4-whole.v:24$7": {
+        "$ternary$carry4-whole.v:24$7": {
           "hide_name": 1,
           "type": "$mux",
           "parameters": {
             "WIDTH": 1
           },
           "attributes": {
-            "src": "/home/mglb/projects/sphinx-verilog/src/sphinx-verilogdomain-gh/example/source/verilog/carry4-whole.v:24"
+            "src": "carry4-whole.v:24"
           },
           "port_directions": {
             "A": "input",
@@ -145,7 +145,7 @@
             "Y": [ 5 ]
           }
         },
-        "$xor$/home/mglb/projects/sphinx-verilog/src/sphinx-verilogdomain-gh/example/source/verilog/carry4-whole.v:20$2": {
+        "$xor$carry4-whole.v:20$2": {
           "hide_name": 1,
           "type": "$xor",
           "parameters": {
@@ -156,7 +156,7 @@
             "Y_WIDTH": 4
           },
           "attributes": {
-            "src": "/home/mglb/projects/sphinx-verilog/src/sphinx-verilogdomain-gh/example/source/verilog/carry4-whole.v:20"
+            "src": "carry4-whole.v:20"
           },
           "port_directions": {
             "A": "input",
@@ -171,53 +171,53 @@
         }
       },
       "netnames": {
-        "$or$/home/mglb/projects/sphinx-verilog/src/sphinx-verilogdomain-gh/example/source/verilog/carry4-whole.v:20$1_Y": {
+        "$or$carry4-whole.v:20$1_Y": {
           "hide_name": 1,
           "bits": [ 20 ],
           "attributes": {
-            "src": "/home/mglb/projects/sphinx-verilog/src/sphinx-verilogdomain-gh/example/source/verilog/carry4-whole.v:20"
+            "src": "carry4-whole.v:20"
           }
         },
         "CI": {
           "hide_name": 0,
           "bits": [ 10 ],
           "attributes": {
-            "src": "/home/mglb/projects/sphinx-verilog/src/sphinx-verilogdomain-gh/example/source/verilog/carry4-whole.v:19"
+            "src": "carry4-whole.v:19"
           }
         },
         "CO": {
           "hide_name": 0,
           "bits": [ 2, 3, 4, 5 ],
           "attributes": {
-            "src": "/home/mglb/projects/sphinx-verilog/src/sphinx-verilogdomain-gh/example/source/verilog/carry4-whole.v:19"
+            "src": "carry4-whole.v:19"
           }
         },
         "CYINIT": {
           "hide_name": 0,
           "bits": [ 11 ],
           "attributes": {
-            "src": "/home/mglb/projects/sphinx-verilog/src/sphinx-verilogdomain-gh/example/source/verilog/carry4-whole.v:19"
+            "src": "carry4-whole.v:19"
           }
         },
         "DI": {
           "hide_name": 0,
           "bits": [ 12, 13, 14, 15 ],
           "attributes": {
-            "src": "/home/mglb/projects/sphinx-verilog/src/sphinx-verilogdomain-gh/example/source/verilog/carry4-whole.v:19"
+            "src": "carry4-whole.v:19"
           }
         },
         "O": {
           "hide_name": 0,
           "bits": [ 6, 7, 8, 9 ],
           "attributes": {
-            "src": "/home/mglb/projects/sphinx-verilog/src/sphinx-verilogdomain-gh/example/source/verilog/carry4-whole.v:19"
+            "src": "carry4-whole.v:19"
           }
         },
         "S": {
           "hide_name": 0,
           "bits": [ 16, 17, 18, 19 ],
           "attributes": {
-            "src": "/home/mglb/projects/sphinx-verilog/src/sphinx-verilogdomain-gh/example/source/verilog/carry4-whole.v:19"
+            "src": "carry4-whole.v:19"
           }
         }
       }
